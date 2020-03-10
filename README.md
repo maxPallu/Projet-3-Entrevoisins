@@ -1,6 +1,6 @@
 # Projet 3 | Application Entrevoisins
 
-# INSTRUCTIONS SUR L'INSTALLATION DE CE PROET : <br />
+# INSTRUCTIONS SUR L'INSTALLATION DE CE PROJET : <br />
 
 Etape 1 - Cliquez sur le bouton vert "Clone or download" et téléchargez le fichier Zip <br />
 Etape 2 - Extrayez le fichier zip pour obtenir un dossier décompressé <br />
@@ -11,7 +11,6 @@ Etape 6 - Le projet est maintenant ouvert dans Android Studio ! <br />
 <br />
 # COMMENT EXECUTER CE PROJET ? <br />
 <br />
-Cliquez sur la petite flèche verte en haut à droite d'Android Studio, à l'aide de l'émulateur, ou directement sur un appareil physique.
-<br /> 
+Cliquez sur la petite flèche verte en haut à droite d'Android Studio, à l'aide de l'émulateur, ou directement sur un appareil physique. <br /> 
 <br />
-# Les tests sont disponibles dans le dossier "Tests"
+# __Les tests sont disponibles dans le dossier "Tests"__
