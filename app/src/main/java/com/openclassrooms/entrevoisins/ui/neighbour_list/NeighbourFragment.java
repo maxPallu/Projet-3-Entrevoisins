@@ -27,6 +27,7 @@ public class NeighbourFragment extends Fragment {
     private NeighbourApiService mApiService;
     private List<Neighbour> mNeighbours;
     private RecyclerView mRecyclerView;
+    private MyNeighbourRecyclerViewAdapter mAdapter = new MyNeighbourRecyclerViewAdapter(mNeighbours);
 
 
     /**
@@ -88,7 +89,7 @@ public class NeighbourFragment extends Fragment {
     @Subscribe
     public void onDeleteNeighbour(DeleteNeighbourEvent event) {
         mApiService.deleteNeighbour(event.neighbour);
-        mApiService.deleteFavorite(event.neighbour);
+        mAdapter.notifyDataSetChanged();
         initList();
     }
 }

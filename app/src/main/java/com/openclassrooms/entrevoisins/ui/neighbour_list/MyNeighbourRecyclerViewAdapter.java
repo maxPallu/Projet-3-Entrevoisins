@@ -1,7 +1,6 @@
 package com.openclassrooms.entrevoisins.ui.neighbour_list;
 
 import android.content.Intent;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -53,23 +52,22 @@ public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeigh
             @Override
             public void onClick(View v) {
                 EventBus.getDefault().post(new DeleteNeighbourEvent(neighbour));
-                DI.getNeighbourApiService().deleteFavorite(neighbour);
             }
         });
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent newFunctionActivity = new Intent(v.getContext(), NewFunction.class);
+         holder.itemView.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 Intent newFunctionActivity = new Intent(v.getContext(), NewFunction.class);
 
-                neighbourID = holder.getItemId();
+                 neighbourID = holder.getItemId();
 
 
-                newFunctionActivity.putExtra("voisin", neighbour);
+                 newFunctionActivity.putExtra("voisin", neighbour);
 
-                v.getContext().startActivity(newFunctionActivity);
-            }
-        });
+                 v.getContext().startActivity(newFunctionActivity);
+             }
+         });
     }
 
     @Override

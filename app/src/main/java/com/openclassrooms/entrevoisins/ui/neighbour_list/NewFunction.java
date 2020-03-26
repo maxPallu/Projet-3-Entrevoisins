@@ -62,7 +62,6 @@ public class NewFunction extends AppCompatActivity {
 
         if(DI.getNeighbourApiService().getFavorites().contains(neighbour)) {
             addFavorite.setBackgroundTintList(getResources().getColorStateList(R.color.backgroundFavroite));
-            DI.getNeighbourApiService().deleteFavorite(neighbour);
         }
 
         //Permet d'éteindre cette activité en cliquant sur la flèche

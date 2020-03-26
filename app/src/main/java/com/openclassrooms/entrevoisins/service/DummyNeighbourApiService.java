@@ -55,11 +55,11 @@ public class DummyNeighbourApiService implements  NeighbourApiService {
 
     @Override
     public void addNeighbourFavorite(Neighbour neighbour) {
-        neighbour.setIsFavorite(1);
+        neighbours.get(neighbours.indexOf(neighbour)).setIsFavorite(1);
     }
 
     @Override
     public void deleteFavorite(Neighbour neighbour) {
-        neighbour.setIsFavorite(0);
+        neighbours.get(neighbours.indexOf(neighbour)).setIsFavorite(0);
     }
 }
