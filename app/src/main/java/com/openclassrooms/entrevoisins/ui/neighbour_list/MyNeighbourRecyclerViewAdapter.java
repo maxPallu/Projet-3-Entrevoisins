@@ -27,7 +27,6 @@ import butterknife.ButterKnife;
 public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeighbourRecyclerViewAdapter.ViewHolder> {
 
     private final List<Neighbour> mNeighbours;
-    private FloatingActionButton favorite;
     private long neighbourID;
 
     public MyNeighbourRecyclerViewAdapter(List<Neighbour> items) {
@@ -66,12 +65,7 @@ public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeigh
                 neighbourID = holder.getItemId();
 
 
-                newFunctionActivity.putExtra("nomVoisins", neighbour.getName());
-                newFunctionActivity.putExtra("neighbourAdress", neighbour.getAddress());
-                newFunctionActivity.putExtra("neighbourTel", neighbour.getPhoneNumber());
-                newFunctionActivity.putExtra("infoNeighbour", neighbour.getAboutMe());
-                newFunctionActivity.putExtra("avatarURL", neighbour.getAvatarUrl());
-                newFunctionActivity.putExtra("neighbour_id", neighbourID);
+                newFunctionActivity.putExtra("voisin", neighbour);
 
                 v.getContext().startActivity(newFunctionActivity);
             }

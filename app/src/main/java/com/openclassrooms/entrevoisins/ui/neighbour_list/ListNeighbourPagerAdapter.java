@@ -10,7 +10,7 @@ import android.view.View;
 import com.openclassrooms.entrevoisins.model.Neighbour;
 
 
-public class ListNeighbourPagerAdapter extends FragmentPagerAdapter {
+public class   ListNeighbourPagerAdapter extends FragmentPagerAdapter {
 
     public ListNeighbourPagerAdapter(FragmentManager fm) {
         super(fm);

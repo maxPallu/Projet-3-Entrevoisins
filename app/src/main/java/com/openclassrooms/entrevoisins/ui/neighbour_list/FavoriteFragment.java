@@ -21,14 +21,15 @@ import com.openclassrooms.entrevoisins.service.NeighbourApiService;
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class FavoriteFragment extends Fragment {
 
     private NeighbourApiService mApiService;
-    private List<Neighbour> mNeighbours;
     private List<Neighbour> mFavorite;
     private RecyclerView mRecyclerView;
+    private MyNeighbourRecyclerViewAdapter mAdapter;
 
     public FavoriteFragment newInstance() {
         FavoriteFragment fragment = new FavoriteFragment();
@@ -56,6 +57,7 @@ public class FavoriteFragment extends Fragment {
         mFavorite = mApiService.getFavorites();
         mRecyclerView.setAdapter(new MyNeighbourRecyclerViewAdapter(mFavorite));
     }
+
 
     @Override
     public void onResume() {
